@@ -1,0 +1,40 @@
+@use "../mixins/constrain" as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1.75rem;
+  @include constrain;
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+    gap: 1.75rem;
+  }
+
+  &__link {
+    color: var(--color-gray-violet);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-links);
+    text-decoration: none;
+    font-size: var(--fs-1);
+    font-weight: var(--fw-2);
+    transition: all 0.2s;
+
+    &:hover {
+      color: var(--color-dark-violet-2);
+    }
+
+    &--cta {
+      border: 1px solid var(--color-dark-violet-2);
+      color: var(--color-dark-violet-2);
+      padding: 0.75rem 1.5rem;
+
+      &:hover {
+        background-color: var(--color-dark-violet-2);
+        color: var(--color-light-gray);
+      }
+    }
+  }
+}
