@@ -1,0 +1,35 @@
+:root {
+  --color-dark-violet: hsl(256, 26%, 20%);
+  --color-dark-violet-2: hsl(270, 9%, 17%);
+  --color-gray-blue: hsl(216, 30%, 68%);
+  --color-gray-violet: hsl(273, 4%, 51%);
+  --color-light-gray: hsl(0, 0%, 98%);
+
+  --ff-heading: "DM Serif Display", serif;
+  --ff-body: "Karla", sans-serif;
+
+  --fw-1: 400;
+  --fw-2: 700;
+
+  --fs-1: 0.8125rem;
+  --fs-2: 1rem;
+  --fs-3: 1.75rem;
+  --fs-4: 3.5rem;
+  --fs-5: 4.5rem;
+
+  --ls-links: 1.5px;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--ff-body);
+  font-weight: var(--fw-1);
+  color: var(--color-dark-violet);
+}
