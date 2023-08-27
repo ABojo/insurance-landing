@@ -1,7 +1,12 @@
 @use "../mixins/constrain" as *;
 
 .footer {
-  @include constrain;
+  background-color: var(--color-light-gray);
+  padding-block: 3.75rem;
+
+  &__container {
+    @include constrain;
+  }
 
   &__head {
     display: flex;
@@ -9,7 +14,7 @@
     align-items: center;
     border-bottom: 1px solid var(--color-gray-violet);
     padding-bottom: 2.35rem;
-    margin-bottom: 5rem;
+    margin-bottom: 2.5rem;
   }
 
   &__socials {
@@ -24,6 +29,41 @@
       &:hover {
         color: var(--color-dark-violet);
       }
+    }
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-size: var(--fs-1);
+    color: var(--color-gray-violet);
+    font-weight: var(--fw-2);
+    letter-spacing: var(--ls-links);
+  }
+
+  &__nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    font-size: var(--fs-1);
+    letter-spacing: var(--ls-links);
+    text-decoration: none;
+    color: var(--color-dark-violet-2);
+    font-weight: var(--fw-2);
+    transition: all 0.2s;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
