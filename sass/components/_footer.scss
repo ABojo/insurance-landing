@@ -1,0 +1,29 @@
+@use "../mixins/constrain" as *;
+
+.footer {
+  @include constrain;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-gray-violet);
+    padding-bottom: 2.35rem;
+    margin-bottom: 5rem;
+  }
+
+  &__socials {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+
+    li svg {
+      color: var(--color-gray-violet);
+      transition: all 0.2s;
+
+      &:hover {
+        color: var(--color-dark-violet);
+      }
+    }
+  }
+}
