@@ -1,0 +1,51 @@
+@use "../mixins/constrain" as *;
+
+.features {
+  @include constrain;
+  padding-top: 19.25rem;
+  padding-bottom: 10rem;
+
+  &::before {
+    display: block;
+    content: "";
+    height: 1px;
+    background-color: var(--color-dark-violet);
+    width: 9.25rem;
+    margin-bottom: 2.75rem;
+  }
+
+  &__heading {
+    font-weight: var(--fw-1);
+    font-size: var(--fs-5);
+    font-family: var(--ff-heading);
+    color: var(--color-dark-violet-2);
+    margin-bottom: 5rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  &__icon {
+    width: 5.5rem;
+    height: 5.5rem;
+    background-color: var(--color-gray-blue);
+    border-radius: 100%;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-size: var(--fs-3);
+    font-family: var(--ff-heading);
+    font-weight: var(--fw-1);
+    margin-bottom: 1rem;
+  }
+
+  &__paragraph {
+    color: var(--color-gray-violet);
+    line-height: var(--line-height-p);
+    font-size: var(--fs-2);
+  }
+}

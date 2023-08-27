@@ -1,5 +1,6 @@
 @use "./components/header";
 @use "./components/hero";
+@use "./components/features";
 
 :root {
   --color-dark-violet: hsl(256, 26%, 20%);
@@ -24,6 +25,8 @@
 
   --layout-max-width: 69rem;
   --layout-width: 90%;
+
+  --line-height-p: 1.5rem;
 }
 
 *,
