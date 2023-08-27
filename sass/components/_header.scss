@@ -1,11 +1,17 @@
 @use "../mixins/constrain" as *;
 
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  position: relative;
+  z-index: 1;
   padding-block: 1.75rem;
-  @include constrain;
+  background-color: white;
+
+  &__container {
+    @include constrain;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   &__list {
     display: flex;

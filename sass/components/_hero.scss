@@ -7,6 +7,17 @@
   position: relative;
   max-height: 37.5rem;
 
+  &__pattern-right {
+    position: absolute;
+    right: 0;
+    top: -5rem;
+  }
+
+  &__pattern-left {
+    position: absolute;
+    top: 27rem;
+  }
+
   &__container {
     @include constrain;
     display: grid;

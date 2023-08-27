@@ -3,6 +3,8 @@
 .footer {
   background-color: var(--color-light-gray);
   padding-block: 3.75rem;
+  background-image: url("../images/bg-pattern-footer-desktop.svg");
+  background-repeat: no-repeat;
 
   &__container {
     @include constrain;
