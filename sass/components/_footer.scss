@@ -1,10 +1,15 @@
 @use "../mixins/constrain" as *;
+@use "../abstracts/breakpoints" as *;
 
 .footer {
   background-color: var(--color-light-gray);
   padding-block: 3.75rem;
   background-image: url("../images/bg-pattern-footer-desktop.svg");
   background-repeat: no-repeat;
+
+  @media (max-width: $bp-6) {
+    background-image: url("../images/bg-pattern-footer-mobile.svg");
+  }
 
   &__container {
     @include constrain;
@@ -17,6 +22,11 @@
     border-bottom: 1px solid var(--color-gray-violet);
     padding-bottom: 2.35rem;
     margin-bottom: 2.5rem;
+
+    @media (max-width: $bp-5) {
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 
   &__socials {
@@ -41,11 +51,30 @@
     color: var(--color-gray-violet);
     font-weight: var(--fw-2);
     letter-spacing: var(--ls-links);
+
+    @media (max-width: $bp-4) {
+      margin-bottom: 1rem;
+    }
   }
 
   &__nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    @media (max-width: $bp-4) {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      width: 75%;
+      margin: 0 auto;
+    }
+
+    @media (max-width: $bp-5) {
+      grid-template-columns: 1fr;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+      gap: 4rem;
+    }
   }
 
   &__list {

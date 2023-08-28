@@ -38,8 +38,14 @@
     </header>
     <main class="main">
       <section class="hero">
-        <img class="hero__pattern-right" src="images/bg-pattern-intro-right-desktop.svg" alt="" />
-        <img class="hero__pattern-left" src="images/bg-pattern-intro-left-desktop.svg" alt="" />
+        <picture class="hero__pattern-right">
+          <source srcset="images/bg-pattern-intro-right-mobile.svg" media="(max-width: 31.25em)" />
+          <img src="images/bg-pattern-intro-right-desktop.svg" alt="" />
+        </picture>
+        <picture class="hero__pattern-left">
+          <source srcset="images/bg-pattern-intro-left-mobile.svg" media="(max-width: 31.25rem)" />
+          <img src="images/bg-pattern-intro-left-desktop.svg" alt="" />
+        </picture>
         <div class="hero__container">
           <div class="hero__text">
             <h1 class="hero__heading">Humanizing your insurance.</h1>
@@ -49,7 +55,10 @@
             </p>
             <a class="hero__cta" href="#">View Plans</a>
           </div>
-          <img class="hero__graphic" src="images/image-intro-desktop.jpg" alt="" />
+          <picture class="hero__graphic">
+            <source srcset="images/image-intro-mobile.jpg" media="(max-width: 31.25em)" />
+            <img src="images/image-intro-desktop.jpg" alt="Family" />
+          </picture>
         </div>
       </section>
       <section class="features">

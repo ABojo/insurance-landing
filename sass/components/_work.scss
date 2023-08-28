@@ -1,4 +1,5 @@
 @use "../mixins/constrain" as *;
+@use "../abstracts/breakpoints" as *;
 
 .work {
   @include constrain;
@@ -12,6 +13,16 @@
   background-repeat: no-repeat;
   background-position: right 0;
 
+  @media (max-width: $bp-2) {
+    flex-direction: column;
+    text-align: center;
+    background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+  }
+
+  @media (max-width: $bp-5) {
+    padding-inline: 2rem;
+  }
+
   &__heading {
     color: var(--color-light-gray);
     font-size: var(--fs-4);
@@ -19,6 +30,10 @@
     font-weight: var(--fw-1);
     max-width: 31rem;
     line-height: 3rem;
+
+    @media (max-width: $bp-2) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__cta {
