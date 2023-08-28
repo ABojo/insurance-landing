@@ -3,6 +3,7 @@
 @use "./components/features";
 @use "./components/work";
 @use "./components/footer";
+@use "./components/mobile-nav";
 @use "./abstracts/breakpoints" as *;
 
 :root {
